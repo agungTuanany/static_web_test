@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap') ;
+
+html, body {
+    margin : 0;
+    padding : 0;
+    box-sizing : border-box;
+    font-family : 'Poppins', sans-serif;
+}
+
+section {
+    min-height : 100vh;
+    width : 100%;
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    justify-content : center;
+    background : #f0f8ff;
+}
+
+section.dark {
+    background : #24292d;
+    transition : all 0.6s ease;
+}
+
+section .container {
+    display : flex;
+    align-items : center;
+    justify-content : center;
+    height : 550px;
+    max-width : 560px;
+    width : 100%;
+    background : #fff;
+    box-shadow : 0 5px 10px rgb(0, 0, 0, 0.2);
+    border-radius : 12px;
+    position : relative;
+}
+
+section.dark .container {
+    background : #323840;
+    transition : all 0.6s ease;
+}
+
+section .container .icons i {
+    position : absolute;
+    right : 17px;
+    top : 17px;
+    height : 30px;
+    width : 30px;
+    background : #24292d;
+    color : #fff;
+    text-align : center;
+    line-height : 30px;
+    border-radius : 50%;
+    font-size : 14px;
+    cursor : pointer;
+}
+
+section.dark .container .icons i {
+    background : #fff;
+    color : #323840;
+    transition : all 0.6s ease;
+}
+
+.container .icons i.fa-sun {
+    opacity : 0;
+    pointer-events : none;
+}
+
+section.dark .container .icons i.fa-sun {
+    opacity : 1;
+    /* pointer-events : auto; */
+    font-size : 16px;
+    transition : all 0.6s ease;
+}
+
+.welcome {
+    text-align : center;
+    padding : 30px 0;
+}
+
+.welcome .company-name {
+    font-size : 4em;
+}
+
+.welcome .welcome-h2 {
+    font-size : 2em;
+    font-weight : 400;
+}
+
+.welcome .company-name {
+    font-family : "Roboto Slab";
+}
+
+section.dark .welcome .company-name, section.dark .welcome .welcome-h2 {
+    color : #fff;
+    transition : all 0.6s ease;
+}
+
+.face-outline {
+    fill : #fff;
+    stroke : #d3d3d3;
+    stroke-width : 64;
+}
+
+section.dark svg .face-outline {
+    fill : #24292d;
+    stroke : #fff;
+    transition : all 0.6s ease;
+}
+
+.face-use, .hand-h-use, .hand-m-use {
+    fill : #000;
+    stroke : none;
+}
+
+section.dark svg .face-use, section.dark svg .hand-h-use, section.dark svg .hand-m-use {
+    fill : #fff;
+    stroke : none;
+    transition : all 0.6s ease;
+}
+
+.hand-s-use {
+    fill : #bd2420;
+    stroke : none;
+}
+
+.center-dot {
+    fill : #fff;
+    stroke : none;
+}
+
+section.dark svg .center-dot {
+    fill : #24292d;
+    stroke : none;
+    transition : all 0.6s ease;
+}
+
+@keyframes rotation {
+    from {
+        transform : rotate(0deg);
+    }
+    to {
+        transform : rotate(360deg);
+    }
+}
+
+.hand-h-use {
+    animation : rotation 43200s linear infinite;
+}
+
+.hand-m-use {
+    animation : rotation 3600s linear infinite;
+}
+
+.hand-s-use {
+    animation : rotation 60s linear infinite;
+}

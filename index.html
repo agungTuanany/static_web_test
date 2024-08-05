@@ -1,16 +1,97 @@
 <!DOCTYPE html>
-<!-- credit: Agung Tuanany -->
-<!-- source:https://github.com/agungTuanany/static_web_test -->
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
-
-    <!--css master -->
-    <!-- <link rel="stylesheet" href="./css/style.css"> -->
-    <!--css vendors -->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- <link rel="icon" type="image/png" href="favicon.png"> -->
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+              integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer">
+        <title>Coming soon!</title>
+    </head>
     <body>
-      <h1>Hello <a href="tuanany.eu.org">tuanany</a></h1>
+        <section>
+            <div class="container">
+                <div class="icons">
+                    <i class="fas fa-moon"></i>
+                    <i class="fas fa-sun"></i>
+                </div>
+                <svg viewbox="-1136 -1136 2272 2272" width="460" height="520" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <!-- MIT license by Tom CHEN https://github.com/tomchen/animated-svg-clock -->
+                    <!-- CREDIT: agungTuanany;; https://github.com/agungTuanany
+                         NOTE:
+                       - Fixing bug. fixing a clock that did not match with your
+                         local machine time.
+
+                         With TOM CHEN repo, it  has a bug, the watch is run but
+                         it did not match with my local machine time, so I
+                         just rewrite JS with more robust.
+                    -->
+                    <!-- CREDIT: https://www.freecodecamp.org/news/svg-javascript-tutorial/ -->
+                    <title>Clock</title>
+                    <defs>
+                        <path id="mark-5min" d="M -40,-1000 l 80,0 0,245 -80,0 z" />
+                        <path id="mark-min" d="M -15,-1000 l 30,0 0,80  -30,0 z" />
+                        <path id="hand-h" d="M -50,-650 l 100,0 10,890 -120,0 z" />
+                        <path id="hand-m" d="M -40,-950 l 80,0 10,1200 -100,0 z" />
+                        <g id="hand-s">
+                            <path d="M -20,-550 l 30,0
+                                     7,890 -30,0 z" />
+                            <path d="M   0,-750 a 105,105 0 0 1 0,210
+                                     a 105,105 0 0 1 0,-210 z" />
+                        </g>
+                        <g id="face-30d">
+                            <use xlink:href="#mark-5min" />
+                            <use xlink:href="#mark-min" transform="rotate(06)" />
+                            <use xlink:href="#mark-min" transform="rotate(12)" />
+                            <use xlink:href="#mark-min" transform="rotate(18)" />
+                            <use xlink:href="#mark-min" transform="rotate(24)" />
+                        </g>
+                        <g id="face-90d">
+                            <use xlink:href="#face-30d" />
+                            <use xlink:href="#face-30d" transform="rotate(30)" />
+                            <use xlink:href="#face-30d" transform="rotate(60)" />
+                        </g>
+                        <g id="face">
+                            <use xlink:href="#face-90d" />
+                            <use xlink:href="#face-90d" transform="rotate(90)" />
+                            <use xlink:href="#face-90d" transform="rotate(180)" />
+                            <use xlink:href="#face-90d" transform="rotate(270)" />
+                        </g>
+                    </defs>
+                    <circle id="face-outline" class="face-outline" r="1104" />
+                    <use xlink:href="#face" id="face-use" class="face-use" />
+                    <use xlink:href="#hand-h" id="hand-h-use" class="hand-h-use" />
+                    <use xlink:href="#hand-m" id="hand-m-use" class="hand-m-use" />
+                    <use xlink:href="#hand-s" id="hand-s-use" class="hand-s-use" />
+                    <circle id="center-dot" class="center-dot" r="40" />
+
+                    <script type="text/javascript">
+                     let hand_h = document.getElementById("hand-h");
+                     let hand_m = document.getElementById("hand-m");
+                     let hand_s = document.getElementById("hand-s");
+
+                     const date = new Date();
+                     const hour = date.getHours();
+                     const minute = date.getMinutes();
+                     const second = date.getSeconds();
+
+                     hand_h.setAttribute("transform", `rotate(${(360 / 12) * hour})`);
+                     hand_m.setAttribute("transform", `rotate(${(360 / 60) * minute})`);
+                     hand_s.setAttribute("transform", `rotate(${(360 / 60) * second})`);
+                    </script>
+                </svg>
+            </div>
+            <div class="welcome">
+                <h2 class="welcome-h2">Welcome!</h2>
+                <h2 class="welcome-h2">to</h2>
+                <h1 class="company-name">tuanany.eu.org</h1>
+                <h2 class="welcome-h2">our website is still under construction</h2>
+            </div>
+        </section>
+        <script src="script.js"></script>
     </body>
+
 </html>
